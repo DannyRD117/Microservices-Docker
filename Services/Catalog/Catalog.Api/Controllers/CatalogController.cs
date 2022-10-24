@@ -50,7 +50,7 @@ namespace Catalog.Api.Controllers
             return Ok();
         }
 
-        [HttpDelete("{id:length(24)")]
+        [HttpDelete("{id:length(24)}")]
         public async Task<ActionResult<Product>> DeleteProduct(string id)
         {
             var product = await productRepository.GetProduct(id);
