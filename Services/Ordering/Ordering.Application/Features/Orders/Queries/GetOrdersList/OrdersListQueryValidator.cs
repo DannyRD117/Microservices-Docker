@@ -15,6 +15,7 @@ namespace Ordering.Application.Features.Orders.Queries.GetOrdersList
                 .NotEmpty()
                 .WithMessage("El UserName no puede ser vacio")
                 .MinimumLength(3)
+                .WithMessage("El UserName debe ser mayor a 3 caracteres")
                 .MaximumLength(10);
         }
     }

@@ -11,12 +11,12 @@ namespace Ordering.Application.Behaviours
     public class UnhandledExceptionBehavior<TRequest, TResponse> :
         IPipelineBehavior<TRequest, TResponse> where TRequest : IRequest<TResponse>
     {
-        private readonly ILogger logger;
+        //private readonly ILogger logger;
 
-        public UnhandledExceptionBehavior(ILogger logger)
-        {
-            this.logger = logger;
-        }
+        //public UnhandledExceptionBehavior(ILogger logger)
+        //{
+        //    this.logger = logger;
+        //}
 
         public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
         {
@@ -28,7 +28,7 @@ namespace Ordering.Application.Behaviours
             {
 
                 var requestName = typeof(TRequest).Name;
-                logger.LogError(ex, $"Excepcion no controlada para la peticion {requestName}.");
+                //logger.LogError(ex, $"Excepcion no controlada para la peticion {requestName}.");
                 throw;
             }
         }

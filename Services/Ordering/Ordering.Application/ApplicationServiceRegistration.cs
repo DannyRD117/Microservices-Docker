@@ -29,7 +29,7 @@ namespace Ordering.Application
                 typeof(UnhandledExceptionBehavior<,>));
 
             services.AddTransient(typeof(IPipelineBehavior<,>),
-                typeof(ValidationBehavior));
+                typeof(ValidationBehavior<,>));
 
             return services;
 
